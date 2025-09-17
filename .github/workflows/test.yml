@@ -1,0 +1,16 @@
+name: Test Build OpenWrt
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to build'
+        required: true
+        default: 'master'
+
+jobs:
+  test_runner:
+    runs-on: ubuntu-20.04 # 或者你配置的自托管 runner
+    steps:
+      - name: Say Hello
+        run: echo "Hello from workflow_dispatch!"
